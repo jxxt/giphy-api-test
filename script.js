@@ -29,9 +29,9 @@ const asyncLoadGif = async (category) => {
         { mode: "cors" }
     );
 
-    let responseJson = await response.json();
+    const responseJson = await response.json();
 
-    let url = responseJson.data.images.original.url;
+    const url = responseJson.data.images.original.url;
     console.log(url);
     imageDiv.innerHTML = `<img src="${url}" alt="">`;
 };
